@@ -70,7 +70,7 @@ worksheet.write(row,column,content,style) #Add content with styles
 workbook.save(filename)
 ```
 
-Font color index information:
+Font color index information:<br>
 ![Font color](https://img-blog.csdnimg.cn/9849cb6781164839b5dc6d72a37467e9.png?x-oss-process%253Dimage%252Fwatermark%252Ctype_d3F5LXplbmhlaQ%252Cshadow_50%252Ctext_Q1NETiBA7pSnIHNoYW1teQ%253D%253D%252Csize_20%252Ccolor_FFFFFF%252Ct_70%252Cg_se%252Cx_16)
 
 2. Pattern styles
