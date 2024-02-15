@@ -1,6 +1,4 @@
 # C in Linux
-This note is written for C in Linux OS, including basic GCC usage and MAKE commands<br>Written by ***lqy***
-[TOC]
 
 ---
 ## GCC
