@@ -1,15 +1,6 @@
----
-toc:
-    depth_from:1
-    depth_to:3
-    ordered:true
----
-
 # Vim Plugins Configuration{ignore=True}
 
 To configure some useful plugins for vim, here is a tutorial for reference.
-
-[TOC]
 
 ---
 
