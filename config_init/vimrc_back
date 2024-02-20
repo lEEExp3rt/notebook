@@ -62,4 +62,3 @@ set softtabstop=4   " Backspace 4 spaces
 if filereadable("/etc/vim/vimrc.local")
   source /etc/vim/vimrc.local
 endif
-
