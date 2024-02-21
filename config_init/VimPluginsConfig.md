@@ -133,7 +133,7 @@ $ ./install.py --clang-completer # Install by python.
 
 Then the configuration is completed.
 
-### Futher
+### Further
 
 > Reference:[CSDN](https://blog.csdn.net/lyshark_lyshark/article/details/125846994)
 
