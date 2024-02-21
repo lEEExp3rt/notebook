@@ -1,4 +1,4 @@
-# Vim Plugins Configuration{ignore=True}
+# Vim Plugins Configuration
 
 To configure some useful plugins for vim, here is a tutorial for reference.
 
