@@ -1,8 +1,11 @@
 # VIM
-## This note is written for vim-usage.
+
+This note is written for vim-usage.
 
 ---
-### Insert
+
+## Insert
+
 * i	#在光标所在处输入
 * a	#在光标在处后方输入
 * o	#在光标所在处的下方打开一个新行
@@ -11,7 +14,9 @@
 * O	#在光标所在处的上方打开一个新行
 
 ---
-### Save and quit
+
+## Save and quit
+
 * ZZ			#保存并退出
 * ZQ			#不保存退出
 * :x			#保存并退出
@@ -23,7 +28,8 @@
 * :r![command]		#执行命令并读入命令command的输出
 
 ---
-### Jump
+
+## Jump
 * w	#跳转至下一个单词词首
 * e	#跳转至当前或下一个单词词尾
 * b	#跳转至当前或上一个单词词首
@@ -43,7 +49,9 @@
 * L	#跳转至页底
 
 ---
-### Delete and replace
+
+## Delete and replace
+
 * xp	#交换光标所在处字符与其后字符位置
 * ~	#转换大小写
 * r	#替换光标所在处字符
@@ -57,17 +65,23 @@
 * [k]dd	#删除光标所在处的行起的k行
 
 ---
-### Paste
+
+## Paste
+
 p
 
 ---
-### Cursor
+
+## Cursor
+
 * zt	#将光标所在行移到屏幕顶端
 * zz	#将光标所在行移到屏幕中间
 * zb	#将光标所在行移到屏幕底端
 
 ---
-### View
+
+## View
+
 * Ctrl+f	#向文件尾翻一屏
 * Ctrl+b	#向文件首部翻一屏
 * Ctrl+d	#向文件尾部翻半屏
