@@ -177,7 +177,7 @@ nav:
 进入项目文件夹
 
 ```shell
- cd Project
+$ cd Project
 $ mkdocs serve
 ```
 
@@ -220,7 +220,7 @@ $ mkdocs build
 	2. 将项目目录的`site/`推送到远程分支`gh-pages`
 	3. 执行`mkdocs build`
 
-4. 浏览器访问**`http://User.github.io/ProjectRepo`**即可查看
+4. 浏览器访问`http://User.github.io/ProjectRepo`即可查看
 
 > :notebook: 通过把项目部署为一个站点，可以利用`master`分支上传源文档，用`gh-pages`分支上传`site/`下的文档
 
