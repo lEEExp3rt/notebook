@@ -131,9 +131,11 @@ $ ./install.sh --clang-completer # Install by shell.
 $ ./install.py --clang-completer # Install by python.
 ```
 
-Then the configuration is completed.
+Then the installation is completed.
 
-### Further
+### Configuration
+
+#### Other Language Support
 
 > Reference:[CSDN](https://blog.csdn.net/lyshark_lyshark/article/details/125846994)
 
@@ -154,5 +156,9 @@ let g:ycm_global_ycm_extra_conf='~/.vim/bundle/YouCompleteMe/third_party/ycmd/.y
 
 nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
 ```
+
+#### Better UI
+
+> Reference:[CSDN](https://blog.csdn.net/OceanWaves1993/article/details/113562748?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522170964419316800186546839%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&request_id=170964419316800186546839&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~rank_v31_ecpm-10-113562748-null-null.142^v99^pc_search_result_base7&utm_term=youcompleteme%E5%85%B3%E9%97%ADpreview&spm=1018.2226.3001.4187)
 
 ---
