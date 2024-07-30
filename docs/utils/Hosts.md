@@ -1,12 +1,14 @@
-# HOSTS Connection
+# Hosts
 
-This note is written to solve hosts connection.
+这篇笔记用于新建主机时修改Hosts相关配置
 
 ---
 
-## IP Address:
+## IP Address
 
-```Ruby
+相关有用的IP地址：
+
+```txt
 20.205.243.166  github.com
 140.82.113.4    github.com
 199.232.69.194  github.global.ssl.fastly.net
@@ -17,7 +19,14 @@ This note is written to solve hosts connection.
 178.62.74.206   cryptohack.org
 ```
 
-## Edit `hosts` file
-Find the source file in /etc/hosts
+## Edition
 
-> For OS Windows, find the source file in `C:\Windows\System32\drivers\etc\host`.
+打开主机中对应的`hosts`文件
+
+=== "linux"
+
+    `/etc/hosts`
+
+=== 'Windows"
+
+    `C:\Windows\System32\drivers\etc\host`

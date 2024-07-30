@@ -17,7 +17,7 @@ Vundle is short for *Vim bundle* and is a Vim plugin manager, which allows you t
 Use git to install Vundle at first.
 
 ```Bash
-$ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 ```
 
 After this step you can see Vundle.Vim in your path `~/.vim/bundle/Vundle.vim`.
@@ -26,7 +26,7 @@ After this step you can see Vundle.Vim in your path `~/.vim/bundle/Vundle.vim`.
 
 After installation, you need to open your `~/.vimrc` and edit it by adding these following content into it:
 
-```Ruby
+```batch
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
@@ -114,21 +114,21 @@ Then save `.vimrc` and open vim and use `:PluginInstall` and wait until it finis
 Then enter the YCM working folder:
 
 ```Bash
-$ cd ~/.vim/bundle/YouCompleteMe
+cd ~/.vim/bundle/YouCompleteMe
 ```
 
 Then install submodules:
 
 ```Bash
-$ git submodule update --init --recursive
+git submodule update --init --recursive
 ```
 
 Then run the installation script:
 
 ```Bash
-$ ./install.sh --clang-completer # Install by shell.
+./install.sh --clang-completer # Install by shell.
 
-$ ./install.py --clang-completer # Install by python.
+./install.py --clang-completer # Install by python.
 ```
 
 Then the installation is completed.
@@ -142,14 +142,14 @@ Then the installation is completed.
 However, the installation from above only support C completion. If more functions are needed, you can run:
 
 ```Bash
-$ ./install.py --all # All language installation.
+./install.py --all # All language installation.
 
-$ ./install.py --clangd-completer # C code-completion with better completion.
+./install.py --clangd-completer # C code-completion with better completion.
 ```
 
 `./install.py --clangd-completer` will be completed if these following are added to `~/.vimrc`:
 
-```Ruby
+```Batch
 " Add these to your .vimrc
 
 let g:ycm_global_ycm_extra_conf='~/.vim/bundle/YouCompleteMe/third_party/ycmd/.ycm_extra_conf.py'

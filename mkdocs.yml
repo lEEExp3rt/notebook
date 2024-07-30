@@ -1,0 +1,33 @@
+site_name: 1EEExp3rt's Notebook
+site_url: https://leeexp3rt.github.io/notebook/
+site_description: My personal notebook for learning and sharing knowledge.
+site_author: 1EEExp3rt
+site_dir: docs
+nav:
+  - Home: index.md
+  - Configuration:
+    - Fish: config/FishInit.md
+    - GDB: config/GdbPlugins.md
+    - Hosts: config/Hosts.md
+    - Pip: config/Pip.md
+    - VimPlugins: config/VimPluginsConfig.md
+  - C:
+    - Linux: C/CInLinux.md
+  - Python:
+    - Excel: Python/excel.md
+  - Conda: Conda.md
+  - Git: Git.md
+  - SSH: ssh.md
+  - Vim: Vim.md
+theme:
+  name: material
+  features:
+    - navigation.instant
+markdown_extensions:
+  - toc:
+      permalink: true
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+plugins:
+  - search
