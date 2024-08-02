@@ -1,18 +1,17 @@
 # Conda
 
-[TOC]
-
 ---
 
 ## Installation
 
 > 此处介绍的是在Linux下的安装操作
 
-[Conda官网](https://docs.anaconda.com/miniconda/)
+!!! info "官方信息"
+    [anaconda.com](https://docs.anaconda.com/miniconda/)
 
 ### Download
 
-首先下载安装包[清华源conda](https://mirrors.tuna.tsinghua.edu.cn/anaconda/)
+首先在[清华源](https://mirrors.tuna.tsinghua.edu.cn/anaconda/)下载包
 
 下载后得到文件`Miniconda3-latest-Linux-x86_64.sh`
 
@@ -26,15 +25,16 @@ bash Miniconda3-latest-Linux-x86_64.sh
 
 安装完后进入Bash即可使用
 
-### Configuration
+## Configuration
 
-#### 加入Fish Shell
+### 加入Fish Shell
 
-> 笔者使用的是Ubuntu22.04，终端为Fish Shell
+!!! note "配置信息"
+    如果你也使用[Fish Shell](https://fishshell.com/)，那么可以参考这个配置
 
 进入Bash，使用`conda init fish`将初始化命令加入fish中
 
-#### 修改prompt位置
+### 修改prompt位置
 
 如果要把`(base)`改到prompt左侧，在`~/.config/fish/config.fish`中加入
 
@@ -44,7 +44,7 @@ set -gx CONDA_LEFT_PROMPT 1
 
 退出后重启终端即可
 
-#### 换源
+### 换源
 
 换为清华源
 

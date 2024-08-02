@@ -3,7 +3,7 @@
 > Git是目前世界上最先进的分布式版本控制系统
 
 !!! info "官网"
-    [Git](https://git-scm.com/)
+    [git-scm.com](https://git-scm.com/)
 
 ---
 
@@ -17,10 +17,7 @@
 - 用户级配置在用户目录`~/.gitconfig`
 
 ```bash
-git config -l
-git config --list ## 显示所有配置信息
-git config --system --list ## 显示系统配置信息
-git config --global --list ## 显示全局配置信息
+git config [--system|--global] --list ## 显示[系统|全局]所有配置信息
 ```
 
 ### 配置用户信息
@@ -35,9 +32,9 @@ git config --global user.email "User@email.com" ## 配置用户邮箱为User@ema
 ## Git工作区域
 
 - 本地仓库
-  - 工作目录 Working Directory，当前存放代码的位置
-  - 暂存区 Stage/Index，临时存放你的改动，事实上只是一个文件，保存即将提交到文件列表信息
-  - 资源库 Repository，安全存放数据的位置，里面有提交的所有版本的数据，其中HEAD文件指向最新放入仓库的版本
+    - 工作目录 Working Directory，当前存放代码的位置
+    - 暂存区 Stage/Index，临时存放你的改动，事实上只是一个文件，保存即将提交到文件列表信息
+    - 资源库 Repository，安全存放数据的位置，里面有提交的所有版本的数据，其中HEAD文件指向最新放入仓库的版本
 - 远程仓库 Remote，托管代码的服务器
 
 关系如下：
@@ -82,7 +79,7 @@ flowchart LR
 
 文件规则：
 
-```gitignore
+```gitignore title=".gitignore"
 ## 注释
 ## 所有的忽略都是递归多级忽略，包括当前目录和多级目录中的
 Name ## 忽略Name文件或Name目录
@@ -144,10 +141,10 @@ git reflog ## 查看所有历史记录，包括回退后删除的版本信息
 
 可以看到哈希值（*commitID*），提交仓库分支，作者，提交日期，注释信息
 
-!!! Note
+!!! note "注意"
     `HEAD`指向的表示为当前所在分支
 
-!!! tip 实用小技巧
+!!! tip "实用小技巧"
     在Bash中使用`alias`或`abbr`方法定义`git-log = git log --pretty=oneline --abbrev-commit --all --graph --decorate`以快捷查看简洁日志
 
 ### 版本回退
@@ -204,12 +201,12 @@ git checkout <filename> ## 放弃对文件filename的缓存区操作
 ### 查看
 
 ```bash
-$ git branch [-a] [-r] [-v | -vv] ## 查看当前分支
+git branch [-a] [-r] [-v | -vv] ## 查看当前分支
 ## [-r]：查看远程分支
 ## [-a]：查看所有分支
 ## [-v | -vv]：显示分支commitID和commit内容，-vv显示与之关联的远程分支信息
 
-$ git diff <branch1> <branch2> <filename> ## 查看不同分支的文件差
+git diff <branch1> <branch2> <filename> ## 查看不同分支的文件差
 ```
 
 ### 创建
@@ -217,38 +214,37 @@ $ git diff <branch1> <branch2> <filename> ## 查看不同分支的文件差
 新创建的分支会有当前所有其它分支的提交，而各分支的提交互不干扰
 
 ```bash
-$ git branch <branchname> ## 创建本地分支
+git branch <branchname> ## 创建本地分支
 ```
 
 ### 切换
 
 ```bash
-$ git checkout [-b] <branchname> ## 切换到分支branchname
+git checkout [-b] <branchname> ## 切换到分支branchname
 ## [-b]：创建并切换
 ```
 
 ### 合并
 
 ```bash
-$ git merge <branchname> ## 合并分支branchname的提交到当前分支
+git merge <branchname> ## 合并分支branchname的提交到当前分支
 ```
 
 #### 快进模式
 
-> 引例：创建分支*dev01*，并在*dev01*分支上创建文件test.txt，并提交修改
-> 
-> 
-> 使用`git merge dev01`会出现`Fast-forward`
-> 
-> 使用`git log`会在该次版本后跟随`fast-forwarded`
-> 
+!!! example "快进模式"
+    创建分支*dev01*，并在*dev01*分支上创建文件test.txt，并提交修改
+
+    使用`git merge dev01`会出现`Fast-forward`
+
+    使用`git log`会在该次版本后跟随`fast-forwarded`
 
 Git的智能之处，即快进模式，更快捷方便进行分支合并
 
 #### 合并冲突
 
-> ⚠️ 如果在不同分支上同时修改同一文件的同一行后进行提交，使用`git log`会显示冲突，使用`git merge`会出现冲突
-
+!!! warning "注意"
+    如果在不同分支上同时修改同一文件的同一行后进行提交，使用`git log`会显示冲突，使用`git merge`会出现冲突
 
 解决冲突的方法：
 
@@ -256,66 +252,64 @@ Git的智能之处，即快进模式，更快捷方便进行分支合并
 2. 将解决完冲突的文件加入暂存区
 3. 提交到仓库
 
-> 引例：解决*dev01*分支和*dev02*分支的冲突
-> 
-> 
-> ```bash
-> root@localhost WorkingDirectory MINGW64 (dev01) ## 显示dev01中的内容
-> $ cat test.txt
-> helloworld
-> 
-> root@localhost WorkingDirectory MINGW64 (dev01) ## 切换到dev02
-> $ git checkout dev02
-> 
-> root@localhost WorkingDirectory MINGW64 (dev02) ## 显示dev02中的内容
-> $ cat test.txt
-> HELLOWORLD
-> 
-> root@localhost WorkingDirectory MINGW64 (dev02) ## 尝试merge
-> $ git merge dev01
-> Auto-merging test.txt
-> CONFLICT (add/add): Merge conflict in test.txt
-> Automatic merge failed; fix conflicts and then commit the result.
-> 
-> root@localhost WorkingDirectory MINGW64 (dev02|MERGING) ## 查看冲突内容
-> $ cat test.txt
-> <<<<<<< HEAD
-> HELLOWORLD
-> =======
-> helloworld
-> >>>>>>> dev01
-> 
-> root@localhost WorkingDirectory MINGW64 (dev02|MERGING) ## 修改内容
-> $ vim test.txt
-> 
-> root@localhost WorkingDirectory MINGW64 (dev02|MERGING) ## 查看修改后的内容
-> $ cat test.txt
-> HeLlOwOrLd
-> 
-> root@localhost WorkingDirectory MINGW64 (dev02|MERGING) ## 提交
-> $ git add .
-> 
-> root@localhost WorkingDirectory MINGW64 (dev02|MERGING) ## 提交
-> $ git commit -m "Conflict solved"
-> [dev02 4742251] conflict solved
-> 
-> root@localhost WorkingDirectory MINGW64 (dev02) ## 冲突解决
-> $ cat test.txt
-> HeLlOwOrLd
-> ```
-> 
+??? example "解决分支冲突"
+    解决*dev01*分支和*dev02*分支的冲突
+    ```bash
+    root@localhost WorkingDirectory MINGW64 (dev01) ## 显示dev01中的内容
+    $ cat test.txt
+    helloworld
+    
+    root@localhost WorkingDirectory MINGW64 (dev01) ## 切换到dev02
+    $ git checkout dev02
+    
+    root@localhost WorkingDirectory MINGW64 (dev02) ## 显示dev02中的内容
+    $ cat test.txt
+    HELLOWORLD
+    
+    root@localhost WorkingDirectory MINGW64 (dev02) ## 尝试merge
+    $ git merge dev01
+    Auto-merging test.txt
+    CONFLICT (add/add): Merge conflict in test.txt
+    Automatic merge failed; fix conflicts and then commit the result.
+    
+    root@localhost WorkingDirectory MINGW64 (dev02|MERGING) ## 查看冲突内容
+    $ cat test.txt
+    <<<<<<< HEAD
+    HELLOWORLD
+    =======
+    helloworld
+    >>>>>>    dev01
+    
+    root@localhost WorkingDirectory MINGW64 (dev02|MERGING) ## 修改内容
+    $ vim test.txt
+    
+    root@localhost WorkingDirectory MINGW64 (dev02|MERGING) ## 查看修改后的内容
+    $ cat test.txt
+    HeLlOwOrLd
+    
+    root@localhost WorkingDirectory MINGW64 (dev02|MERGING) ## 提交
+    $ git add .
+    
+    root@localhost WorkingDirectory MINGW64 (dev02|MERGING) ## 提交
+    $ git commit -m "Conflict solved"
+    [dev02 4742251] conflict solved
+    
+    root@localhost WorkingDirectory MINGW64 (dev02) ## 冲突解决
+    $ cat test.txt
+    HeLlOwOrLd
+    ```
 
 ### 删除
 
 ```bash
-$ git branch -d <branchname> ## 不能删除当前分支
-$ git branch -D <branchname> ## 强制删除
+git branch -d <branchname> ## 不能删除当前分支
+git branch -D <branchname> ## 强制删除
 ```
 
 ### 改名
 
 ```bash
-$ git branch -m <oldname> <newname> ## 修改分支名称
+git branch -m <oldname> <newname> ## 修改分支名称
 ```
 
 ---
@@ -324,28 +318,28 @@ $ git branch -m <oldname> <newname> ## 修改分支名称
 
 远程仓库通常有很多中，比较有名的是Github，Gitlab，Gitee
 
-> ⌛ 一般来说，一个远程仓库对应一个本地仓库
+!!! note "远程仓库"
+    一般来说，一个远程仓库对应一个本地仓库
 
 ### 添加
 
 ```bash
-$ git remote add <remoteName> <remotePath> ## 默认远端仓库名remoteName=origin，取决于远端服务器设置
+git remote add <remoteName> <remotePath> ## 默认远端仓库名remoteName=origin，取决于远端服务器设置
 ```
 
-远程仓库的路径通常为URL：`git@github.com:User/Repository.git`可以在github上查看
+!!! tip "URL"
+    远程仓库的路径通常为URL：`git@github.com:User/Repository.git`可以在github上查看
 
-> 引例：作者1EEExp3rt添加远程仓库*git_test*
-> 
-> 
-> ```bash
-> $ git remote add origin git@github.com:1EEExp3rt/git_test.git
-> ```
-> 
+??? example "添加远程仓库"
+    作者1EEExp3rt添加远程仓库*git_test*
+    ```bash
+    git remote add origin git@github.com:1EEExp3rt/git_test.git
+    ```
 
 ### 查看
 
 ```bash
-$ git remote [-v] [show <remoteName>]## 查看远程仓库名称
+git remote [-v] [show <remoteName>]## 查看远程仓库名称
 ## [-v]：查看权限信息
 ## [show <remoteName>]：查看远程仓库详细信息
 ```
@@ -353,28 +347,25 @@ $ git remote [-v] [show <remoteName>]## 查看远程仓库名称
 ### 推送
 
 ```bash
-$ git push [<remoteName> <localBranch>[:<remoteBranch>]] [--set-upstream | -u] [-f]
+git push [<remoteName> <localBranch>[:<remoteBranch>]] [--set-upstream | -u] [-f]
 ## [<remoteName> <localBranch>[:<remoteBranch>]]：分支名相同时可以只用本地名
 ## [--set-upstream | -u]: 二者等价，推送到远程仓库的同时建立起和远程分支的关联关系
 ## [-f]：强制推送本地至云端
 ## [-u]：将本地仓库分支与远程仓库分支一起合并，否则只合并当前分支
 ```
 
-> 引例1：如果当前分支和远程分支已经关联，则可以直接省略所有参数，直接使用`git push`即可
-> 
+!!! example "推送至远程"
+    1. 如果当前分支和远程分支已经关联，则可以直接省略所有参数，直接使用`git push`即可
+    2. `git push origin master:master`
+    3. `git push origin master`
 
-> 引例2：`git push origin master:master`
-> 
-
-> 引例3：`git push origin master`
-> 
-
-> 💡 使用`git branch -vv`查看与当前分支关联的远程分支信息
+!!! tip "查看远程分支信息"
+    使用`git branch -vv`查看与当前分支关联的远程分支信息
 
 ### 克隆
 
 ```bash
-$ git clone [-b <branchName>] <repoPath> [localPath] ## 默认拉取main分支
+git clone [-b <branchName>] <repoPath> [localPath] ## 默认拉取main分支
 ## <repoPath>：仓库路径，通常是URL
 ## [localPath]：克隆目标路径，默认为当前目录
 ## [-b <branchName>]：拉取branchname分支
@@ -388,32 +379,35 @@ $ git clone [-b <branchName>] <repoPath> [localPath] ## 默认拉取main分支
 
 使用抓取命令`git fetch`将远程仓库的更新抓取到本地
 
-> ⚠️ `git fetch`**不会进行合并**
+!!! warning "注意"
+    `git fetch`**不会进行合并**
 
 ```bash
-$ git fetch [remoteName] [branchName] ## 默认抓取全部远程分支
+git fetch [remoteName] [branchName] ## 默认抓取全部远程分支
 ```
 
 ### 拉取
 
 拉取命令`git pull`就是将远程仓库的更新拉到本地并**自动进行合并**
 
-> 💡 `git pull` == `git fetch` + `git merge`
+!!! tip "你有没有注意到"
+    `git pull` == `git fetch` + `git merge`
 
 ```bash
-$ git pull [remoteName] [branchName] ## 默认拉取全部远程分支
+git pull [remoteName] [branchName] ## 默认拉取全部远程分支
 ```
 
 #### 合并冲突
 
 `git pull`包含`git merge`，因此合并时如果出现同一文件的同一行被修改会出现合并冲突，解决方式与本地合并相同
 
-> ⚠️ 因此，在本地修改完需要推送到远程时需要先`git pull`拉取远程仓库的提交以查看远程是否有新的提交，经过本地合并并解决冲突后才能`git push`推送到远程
+!!! warning "注意"
+    因此，在本地修改完需要推送到远程时需要先`git pull`拉取远程仓库的提交以查看远程是否有新的提交，经过本地合并并解决冲突后才能`git push`推送到远程
 
 ### 删除
 
 ```bash
-$ git push <remoteName> --delete <remoteBranch> ## 删除远程分支
+git push <remoteName> --delete <remoteBranch> ## 删除远程分支
 ```
 
 ---
@@ -422,18 +416,19 @@ $ git push <remoteName> --delete <remoteBranch> ## 删除远程分支
 
 在当前工作区修改了文件或其他功能时，想要切换或者创建其它分区是不可能的，git会终止你的操作以防当前工作区内容丢失
 
-> 💡 `git stash`以栈形式存储工作状态
+!!! note "Stash"
+    `git stash`以栈形式存储工作状态
 
 ```bash
-$ git stash ## 保存当前工作状态
-$ git stash list ## 查看当前存储了多少工作状态
+git stash ## 保存当前工作状态
+git stash list ## 查看当前存储了多少工作状态
 
-$ git stash pop ## 恢复到存储的工作状态，同时删除列表
-$ git stash apply ## 恢复第一个状态，不删除列表
-$ git stash apply listname ## 恢复listname状态
-$ git stash drop listname ## 删除指定listname状态
-$ git stash clear ## 移除所有list
-$ git stash show ## 查看当前栈中最新保存的stash和当前目录差异
+git stash pop ## 恢复到存储的工作状态，同时删除列表
+git stash apply ## 恢复第一个状态，不删除列表
+git stash apply listname ## 恢复listname状态
+git stash drop listname ## 删除指定listname状态
+git stash clear ## 移除所有list
+git stash show ## 查看当前栈中最新保存的stash和当前目录差异
 ```
 
 ---
@@ -441,13 +436,13 @@ $ git stash show ## 查看当前栈中最新保存的stash和当前目录差异
 ## 子模块
 
 ```bash
-$ git submodule add github.com/User/Project/Submodule1.git
+git submodule add github.com/User/Project/Submodule1.git
 ## 添加一个名为Submodule1的子模块到仓库中
 ## 添加时会添加仓库的最新版本，但子模块不会自动更新
 
 ## 首先进入子模块目录
-$ git submodule init ## 子模块初始化
-$ git submodule update ## 子模块更新
+git submodule init ## 子模块初始化
+git submodule update ## 子模块更新
 ```
 
 ---
@@ -456,37 +451,22 @@ $ git submodule update ## 子模块更新
 
 为了化简每次登录远程都需要账号密码的麻烦，可以使用ssh的公司密钥对进行连接
 
-1. 创建ssh密钥对key
+!!! tip "创建密钥对"
+    如果本地已经存在ssh密钥对，可以直接使用
 
-> 💡 如果本地已经存在ssh密钥对，可以直接使用
+    如果本地没有，则使用以下命令创建sshkey：
+    ```bash
+    ssh-keygen -t rsa -C "User@email.com"
+    ```
 
-使用以下命令创建sshkey：
+    生成的文件中，`id_rsa`是私钥，`id_rsa.pub`是公钥
 
-```bash
-$ ssh-keygen -t rsa -C "User@email.com"
-```
+1. 在GitHub上添加公钥`id_rsa.pub`
+2. 登录验证
 
-- `-t`指定密钥类型，默认为`rsa`，可以省略
-- `-C`设置注释文字，比如邮箱
-- `-f`指定密钥文件存储文件名，默认为`~/.ssh/id_rsa`，不使用则为默认
-    - 提示选择密钥存储路径，回车选择默认
-    - 提示设置通行口令，即打开密钥时的需要的密码，回车可继续
-
-生成的文件中，`id_rsa`是私钥，`id_rsa.pub`是公钥
-
-2. 添加公钥
-
-将公钥添加到github上
-
-> 💡 使用以下命令验证是否成功绑定密钥对：
-
-```bash
-$ ssh -T git@github.com
-Hi User! You've successfully authenticated, but GitHub does not provide shell access.
-```
-
-3. 登录验证
-
----
-
-## 在IDEA中使用Git
+!!! tip "验证登录"
+    使用以下命令验证是否成功绑定密钥对：
+    ```bash
+    $ ssh -T git@github.com
+    Hi User! You've successfully authenticated, but GitHub does not provide shell access.
+    ```
