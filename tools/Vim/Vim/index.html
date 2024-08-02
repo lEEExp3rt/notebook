@@ -12,26 +12,28 @@
         <meta name="author" content="1EEExp3rt">
       
       
-        <link rel="canonical" href="https://leeexp3rt.github.io/Notebook/">
+        <link rel="canonical" href="https://leeexp3rt.github.io/Notebook/tools/Vim/Vim/">
       
       
+        <link rel="prev" href="../../Conda/">
       
-        <link rel="next" href="tools/Git/">
+      
+        <link rel="next" href="../VimPluginsConfig/">
       
       
-      <link rel="icon" href="assets/icon/Neymar.jpg">
+      <link rel="icon" href="../../../assets/icon/Neymar.jpg">
       <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.29">
     
     
       
-        <title>1EEExp3rt's Notebook</title>
+        <title>Tutorial - 1EEExp3rt's Notebook</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.76a95c52.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.76a95c52.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -52,7 +54,7 @@
     
       <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -78,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#welcome-to-eeexp3rts-notebook" class="md-skip">
+        <a href="#vim" class="md-skip">
           Skip to content
         </a>
       
@@ -92,9 +94,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="1EEExp3rt&#39;s Notebook" class="md-header__button md-logo" aria-label="1EEExp3rt's Notebook" data-md-component="logo">
+    <a href="../../.." title="1EEExp3rt&#39;s Notebook" class="md-header__button md-logo" aria-label="1EEExp3rt's Notebook" data-md-component="logo">
       
-  <img src="assets/icon/handsome.jpg" alt="logo">
+  <img src="../../../assets/icon/handsome.jpg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -111,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Home
+              Tutorial
             
           </span>
         </div>
@@ -233,11 +235,9 @@
         
   
   
-    
   
-  
-    <li class="md-tabs__item md-tabs__item--active">
-      <a href="." class="md-tabs__link">
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
         
   
     
@@ -252,11 +252,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="tools/Git/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../Git/" class="md-tabs__link">
           
   
     
@@ -282,7 +284,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="C/tools/Make/" class="md-tabs__link">
+        <a href="../../../C/tools/Make/" class="md-tabs__link">
           
   
     
@@ -305,7 +307,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="blog/" class="md-tabs__link">
+        <a href="../../../blog/" class="md-tabs__link">
           
   
     
@@ -340,9 +342,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="1EEExp3rt&#39;s Notebook" class="md-nav__button md-logo" aria-label="1EEExp3rt's Notebook" data-md-component="logo">
+    <a href="../../.." title="1EEExp3rt&#39;s Notebook" class="md-nav__button md-logo" aria-label="1EEExp3rt's Notebook" data-md-component="logo">
       
-  <img src="assets/icon/handsome.jpg" alt="logo">
+  <img src="../../../assets/icon/handsome.jpg" alt="logo">
 
     </a>
     1EEExp3rt's Notebook
@@ -366,19 +368,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -387,7 +380,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -396,8 +388,10 @@
       
   
   
+    
   
   
+  
     
     
       
@@ -412,19 +406,20 @@
     
     
       
+        
+        
+      
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
-        
-          
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -435,7 +430,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Tools
@@ -449,7 +444,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tools/Git/" class="md-nav__link">
+      <a href="../../Git/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -470,7 +465,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tools/Conda/" class="md-nav__link">
+      <a href="../../Conda/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -488,8 +483,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -503,13 +500,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" checked>
         
           
           <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
@@ -523,7 +518,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_3">
             <span class="md-nav__icon md-icon"></span>
             Vim
@@ -534,10 +529,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="tools/Vim/Vim/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Tutorial
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -546,6 +561,89 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#insertion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Insertion
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quit
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jump" class="md-nav__link">
+    <span class="md-ellipsis">
+      Jump
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deletion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deletion
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#paste" class="md-nav__link">
+    <span class="md-ellipsis">
+      Paste
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cursor" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cursor
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#view" class="md-nav__link">
+    <span class="md-ellipsis">
+      View
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -558,7 +656,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tools/Vim/VimPluginsConfig/" class="md-nav__link">
+      <a href="../VimPluginsConfig/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -587,7 +685,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tools/ssh/" class="md-nav__link">
+      <a href="../../ssh/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -703,7 +801,7 @@
   
   
     <li class="md-nav__item">
-      <a href="C/tools/Make/" class="md-nav__link">
+      <a href="../../../C/tools/Make/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -766,7 +864,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="blog/" class="md-nav__link ">
+            <a href="../../../blog/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -845,7 +943,7 @@
   
   
     <li class="md-nav__item">
-      <a href="blog/archive/2024/" class="md-nav__link">
+      <a href="../../../blog/archive/2024/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -920,7 +1018,7 @@
   
   
     <li class="md-nav__item">
-      <a href="blog/category/update-log/" class="md-nav__link">
+      <a href="../../../blog/category/update-log/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -969,6 +1067,77 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#insertion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Insertion
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quit
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jump" class="md-nav__link">
+    <span class="md-ellipsis">
+      Jump
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deletion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deletion
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#paste" class="md-nav__link">
+    <span class="md-ellipsis">
+      Paste
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cursor" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cursor
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#view" class="md-nav__link">
+    <span class="md-ellipsis">
+      View
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -985,17 +1154,292 @@
   
 
 
-<h1 id="welcome-to-eeexp3rts-notebook">Welcome to !EEExp3rt's Notebook<a class="headerlink" href="#welcome-to-eeexp3rts-notebook" title="Permanent link">&para;</a></h1>
-<p>这里是!EEExp3rt的笔记本</p>
+<h1 id="vim">VIM 简明使用手册<a class="headerlink" href="#vim" title="Permanent link">&para;</a></h1>
+<p>有关Vim的简明使用手册，仅供使用时查阅，而非入门教程</p>
+<p>你可以在网上找到大量关于如何入门Vim的教程</p>
+<div class="admonition note">
+<p class="admonition-title">官方指导</p>
+<p>在命令行键入<code>vimtutor</code>以获得来自Vim官方的入门指导</p>
+</div>
+<hr />
+<h2 id="insertion">Insertion<a class="headerlink" href="#insertion" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">键位</th>
+<th style="text-align: center;">内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><code>i</code></td>
+<td style="text-align: center;">在光标所在处输入</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>a</code></td>
+<td style="text-align: center;">在光标在处后方输入</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>o</code></td>
+<td style="text-align: center;">在光标所在处的下方打开一个新行</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>I</code></td>
+<td style="text-align: center;">在光标所在行的行首输入</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>A</code></td>
+<td style="text-align: center;">在光标所在行的行尾输入</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>O</code></td>
+<td style="text-align: center;">在光标所在处的上方打开一个新行</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="quit">Quit<a class="headerlink" href="#quit" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">键位</th>
+<th style="text-align: center;">内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><code>ZZ</code></td>
+<td style="text-align: center;">保存并退出</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>ZQ</code></td>
+<td style="text-align: center;">不保存退出</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>:x</code></td>
+<td style="text-align: center;">保存并退出</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>:w [filename]</code></td>
+<td style="text-align: center;">保存[到指定文件中]</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>:r &lt;filename&gt;</code></td>
+<td style="text-align: center;">读文件<code>filename</code>内容到当前文件中</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>:![command]</code></td>
+<td style="text-align: center;">执行命令</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>:r![command]</code></td>
+<td style="text-align: center;">执行命令并读入命令<code>command</code>的输出</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="jump">Jump<a class="headerlink" href="#jump" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">键位</th>
+<th style="text-align: center;">内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><code>w</code></td>
+<td style="text-align: center;">跳转至下一个单词词首</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>e</code></td>
+<td style="text-align: center;">跳转至当前或下一个单词词尾</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>b</code></td>
+<td style="text-align: center;">跳转至当前或上一个单词词首</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>[k]w</code></td>
+<td style="text-align: center;">跳转至后<code>k</code>个单词词首</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>^</code></td>
+<td style="text-align: center;">跳转至行首第一个非空字符</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>0</code></td>
+<td style="text-align: center;">跳转至行首</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>$</code></td>
+<td style="text-align: center;">跳转至行尾</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>gg</code></td>
+<td style="text-align: center;">跳转至第一行</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>[k]G</code></td>
+<td style="text-align: center;">跳转至第k行</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>G</code></td>
+<td style="text-align: center;">跳转至最后一行</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>)</code></td>
+<td style="text-align: center;">跳转至下一句</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>(</code></td>
+<td style="text-align: center;">跳转至上一句</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>}</code></td>
+<td style="text-align: center;">跳转至下一段</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>{</code></td>
+<td style="text-align: center;">跳转至上一段</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>H</code></td>
+<td style="text-align: center;">跳转至页首</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>M</code></td>
+<td style="text-align: center;">跳转至页中间行</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>L</code></td>
+<td style="text-align: center;">跳转至页底</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="deletion">Deletion<a class="headerlink" href="#deletion" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">键位</th>
+<th style="text-align: center;">内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><code>xp</code></td>
+<td style="text-align: center;">交换光标所在处字符与其后字符位置</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>~</code></td>
+<td style="text-align: center;">转换大小写</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>r</code></td>
+<td style="text-align: center;">替换光标所在处字符</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>R</code></td>
+<td style="text-align: center;">切换成replace模式</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>x</code></td>
+<td style="text-align: center;">删除光标所在处字符</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>[k]x</code></td>
+<td style="text-align: center;">删除光标所在处起的k个字符</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>J</code></td>
+<td style="text-align: center;">删除当前行后的换行符</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>d</code></td>
+<td style="text-align: center;">删除当前字符</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>d[j]</code></td>
+<td style="text-align: center;">删除至指定位置，结合<a href="#jump">跳转字符</a>使用</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>dd</code></td>
+<td style="text-align: center;">删除光标所在处的行</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>[k]dd</code></td>
+<td style="text-align: center;">删除光标所在处的行起的k行</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="paste">Paste<a class="headerlink" href="#paste" title="Permanent link">&para;</a></h2>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> TODO</li>
+</ul>
+<hr />
+<h2 id="cursor">Cursor<a class="headerlink" href="#cursor" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">键位</th>
+<th style="text-align: center;">内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><code>zt</code></td>
+<td style="text-align: center;">将光标所在行移到屏幕顶端</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>zz</code></td>
+<td style="text-align: center;">将光标所在行移到屏幕中间</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>zb</code></td>
+<td style="text-align: center;">将光标所在行移到屏幕底端</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="view">View<a class="headerlink" href="#view" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">键位</th>
+<th style="text-align: center;">内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><code>Ctrl+f</code></td>
+<td style="text-align: center;">向文件尾翻一屏</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>Ctrl+b</code></td>
+<td style="text-align: center;">向文件首部翻一屏</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>Ctrl+d</code></td>
+<td style="text-align: center;">向文件尾部翻半屏</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>Ctrl+u</code></td>
+<td style="text-align: center;">向文件首部翻半屏</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>Enter</code></td>
+<td style="text-align: center;">按行向后翻</td>
+</tr>
+</tbody>
+</table>
 
 
 
 
 
 
-
-  
-  
 
 
 
@@ -1024,15 +1468,31 @@
       
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
+          
+          <a href="../../Conda/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Conda">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Conda
+              </div>
+            </div>
+          </a>
+        
         
           
-          <a href="tools/Git/" class="md-footer__link md-footer__link--next" aria-label="Next: Git">
+          <a href="../VimPluginsConfig/" class="md-footer__link md-footer__link--next" aria-label="Next: Plugins">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Git
+                Plugins
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -1095,12 +1555,12 @@
       <div class="md-progress" data-md-component="progress" role="progressbar"></div>
     
     
-    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.instant.prefetch", "navigation.instant.progress", "navigation.tracking", "navigation.tabs", "navigation.expand", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "header.autohide", "announce.dismiss", "search.highlight", "search.suggest", "search.share", "content.code.copy"], "search": "assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant.prefetch", "navigation.instant.progress", "navigation.tracking", "navigation.tabs", "navigation.expand", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "header.autohide", "announce.dismiss", "search.highlight", "search.suggest", "search.share", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
       
-        <script src="javascripts/katex.js"></script>
+        <script src="../../../javascripts/katex.js"></script>
       
         <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
       
