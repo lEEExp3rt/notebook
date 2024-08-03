@@ -20,4 +20,4 @@ categories:
 总体上，还有很多的学习空间，未来也会更多去维护和更新
 
 !!! TODO
-    - [ ] Re-formatting
+    - [x] Re-formatting

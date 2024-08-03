@@ -21,6 +21,7 @@ nav:
   - C:
     - Tools:
       - Make: C/tools/Make.md
+      - GDB: C/tools/GDB.md
   - Blog:
     - Blog: blog/index.md
 
